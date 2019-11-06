@@ -1,0 +1,6 @@
+[program:mysql]
+command = /usr/sbin/mysqld --defaults-file=/etc/mysql/my.cnf
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/supervisor/%(program_name)s_error.log
+stdout_logfile=/var/log/supervisor/%(program_name)s_out.log
